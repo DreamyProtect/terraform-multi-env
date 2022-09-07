@@ -1,0 +1,8 @@
+%{ for host in created_hosts ~}
+Host ${ host.hostname }
+    User debian
+    Hostname ${ host.ip_address }
+    HashKnownHosts no
+    IdentityFile ~/.ssh/id_rsa
+
+%{ endfor ~}

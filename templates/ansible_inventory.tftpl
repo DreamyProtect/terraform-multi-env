@@ -1,0 +1,4 @@
+[server_type]
+%{ for host in server_type ~}
+${ host.hostname } ansible_user=${ host.user } ansible_host=${ host.ip }
+%{ endfor ~}

@@ -1,0 +1,8 @@
+server_type:
+  lb:
+    type: "LB-S"
+    zone: "fr-par-1"
+  instances:
+    count: 2
+    image: "ubuntu_focal"
+    type: "DEV1-S"
